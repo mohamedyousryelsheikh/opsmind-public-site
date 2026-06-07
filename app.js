@@ -10,6 +10,86 @@
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 
+  /* ---------- scroll progress bar + parallax ---------- */
+  const progressBar = document.createElement('div');
+  progressBar.id = 'scroll-progress';
+  document.body.prepend(progressBar);
+
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!prefersReduced) {
+    const heroInner = document.querySelector('.hero-inner');
+    const heroGlow  = document.querySelector('.hero-glow');
+    const heroShot  = document.querySelector('.hero-shot');
+    // Mockups are inner cards (no reveal class) — safe to parallax independently
+    const mockups = document.querySelectorAll('.ai-flow, .claims-inbox, .contract-gen');
+
+    [heroInner, heroGlow, heroShot].filter(Boolean)
+      .forEach(el => { el.style.willChange = 'transform, opacity'; });
+    mockups.forEach(el => { el.style.willChange = 'transform'; });
+
+    // Kill the one-shot reveal transition on heroShot once it fires,
+    // so subsequent scroll parallax updates are instant
+    if (heroShot) {
+      heroShot.addEventListener('transitionend', () => {
+        heroShot.style.transition = 'none';
+      }, { once: true });
+    }
+
+    let rafId = null;
+
+    const tick = () => {
+      rafId = null;
+      const sy  = window.scrollY;
+      const vh  = window.innerHeight;
+      const max = document.documentElement.scrollHeight - vh;
+
+      // Progress bar
+      progressBar.style.width = (Math.min(sy / max, 1) * 100) + '%';
+
+      // Hero text — drifts up at 28% scroll speed, fades out by 68% of vh
+      if (heroInner) {
+        if (sy < vh) {
+          heroInner.style.transform = `translateY(${sy * 0.28}px)`;
+          heroInner.style.opacity   = String(Math.max(0, 1 - sy / (vh * 0.68)));
+        } else {
+          heroInner.style.transform = '';
+          heroInner.style.opacity   = '';
+        }
+      }
+
+      // Hero glow — slowest layer, creates depth
+      if (heroGlow && sy < vh * 1.5) {
+        heroGlow.style.transform = `translateY(${sy * 0.45}px)`;
+      }
+
+      // Hero browser window — middle layer
+      if (heroShot && sy < vh * 1.2) {
+        heroShot.style.transform = `translateY(${sy * 0.1}px)`;
+      }
+
+      // Section mockups — subtle vertical parallax as they travel through viewport
+      mockups.forEach(el => {
+        const r = el.getBoundingClientRect();
+        if (r.top > vh + 60 || r.bottom < -60) return;
+        const center = (r.top + r.height / 2 - vh / 2) / vh;
+        el.style.transform = `translateY(${center * -22}px)`;
+      });
+    };
+
+    window.addEventListener('scroll', () => {
+      if (!rafId) rafId = requestAnimationFrame(tick);
+    }, { passive: true });
+
+    tick(); // set initial positions
+  } else {
+    // Reduced motion: only update progress bar, no parallax
+    window.addEventListener('scroll', () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      progressBar.style.width = (Math.min(window.scrollY / max, 1) * 100) + '%';
+    }, { passive: true });
+  }
+
   /* ---------- scroll reveal ---------- */
   // Enable the hidden state only now that JS is running — guarantees content
   // is visible even if scripts fail to load.

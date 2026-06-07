@@ -577,6 +577,18 @@ h1, h2, h3 { letter-spacing: -.03em; line-height: 1.04; font-weight: 700; text-w
 .footer-bottom .socials { display: flex; gap: 14px; }
 .footer-bottom .socials a { color: var(--ink-3); } .footer-bottom .socials a:hover { color: var(--ink); }
 
+/* ---------- scroll progress bar ---------- */
+#scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--indigo) 0%, var(--violet) 100%);
+  z-index: 300;
+  pointer-events: none;
+  border-radius: 0 999px 999px 0;
+}
+
 /* ---------- reveal animation ---------- */
 /* hidden state only applies once JS confirms it can drive the animation,
    so content is never stuck invisible if JS/IO fails */
