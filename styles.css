@@ -489,20 +489,20 @@ h1, h2, h3 { letter-spacing: -.03em; line-height: 1.04; font-weight: 700; text-w
 .s-icon svg { width: 17px; height: 17px; }
 
 .statband .s-num {
-  font-size: clamp(26px, 3vw, 40px);
+  font-size: clamp(38px, 4.8vw, 58px);
   font-weight: 800; letter-spacing: -.04em; line-height: 1;
   background: linear-gradient(120deg, #fff 30%, #C7C5F5 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
   display: flex; align-items: baseline; gap: 4px; white-space: nowrap;
 }
 .s-zero {
-  font-size: clamp(26px, 3vw, 40px);
+  font-size: clamp(38px, 4.8vw, 58px);
   font-weight: 800; letter-spacing: -.04em; line-height: 1;
   background: linear-gradient(120deg, #fff 30%, #C7C5F5 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .s-word {
-  font-size: clamp(16px, 1.7vw, 22px); font-weight: 700; letter-spacing: -.02em;
+  font-size: clamp(18px, 2vw, 26px); font-weight: 700; letter-spacing: -.02em;
   background: linear-gradient(120deg, #fff 30%, #C7C5F5 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
