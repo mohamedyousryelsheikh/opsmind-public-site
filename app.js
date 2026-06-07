@@ -261,32 +261,52 @@
   /* ---------- form — Zoho CRM Web-to-Lead ---------- */
   // Zoho redirects back with ?booked=1 after a successful submission.
   // Detect it, clean the URL, then show the success state.
-  const showFormSuccess = () => {
-    const f = document.getElementById('trial-form');
-    if (!f) return;
-    const card = f.closest('.form-card');
-    f.style.display = 'none';
-    card.querySelector('.form-success').classList.add('show');
-  };
-
   if (new URLSearchParams(window.location.search).get('booked') === '1') {
     history.replaceState(null, '', window.location.pathname + '#start');
-    showFormSuccess();
+    const f = document.getElementById('trial-form');
+    if (f) {
+      const card = f.closest('.form-card');
+      f.style.display = 'none';
+      card.querySelector('.form-success').classList.add('show');
+    }
   }
 
-  // Basic client-side validation — runs before the POST reaches Zoho.
-  const form = document.getElementById('trial-form');
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      const name  = form.querySelector('[name="Last Name"]');
-      const email = form.querySelector('[name="Email"]');
-      let valid = true;
-      [name, email].forEach((el) => {
-        if (!el || !el.value.trim()) { el && el.classList.add('error'); valid = false; }
-        else el && el.classList.remove('error');
-      });
-      if (!valid) e.preventDefault();
-      // If valid, the form posts naturally to Zoho — no preventDefault.
-    });
+})(); // end IIFE — Zoho validation functions must be global (called from onsubmit attribute)
+
+/* Zoho Web-to-Lead validation — must stay in global scope */
+function validateEmail3074688000001485061() {
+  var form = document.forms['WebToLeads3074688000001485061'];
+  var emailFld = form.querySelectorAll('[ftype=email]');
+  for (var i = 0; i < emailFld.length; i++) {
+    var emailVal = emailFld[i].value.replace(/^\s+|\s+$/g, '');
+    if (emailVal.length !== 0) {
+      var atpos = emailVal.indexOf('@'), dotpos = emailVal.lastIndexOf('.');
+      if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= emailVal.length) {
+        alert('Please enter a valid email address.');
+        emailFld[i].focus();
+        return false;
+      }
+    }
   }
+  return true;
+}
+
+function checkMandatory3074688000001485061() {
+  var mndFields = ['Company', 'Last Name'];
+  var labels    = ['Company', 'Full name'];
+  var form = document.forms['WebToLeads3074688000001485061'];
+  for (var i = 0; i < mndFields.length; i++) {
+    var fieldObj = form[mndFields[i]];
+    if (fieldObj && (fieldObj.value || '').replace(/^\s+|\s+$/g, '').length === 0) {
+      fieldObj.classList.add('error');
+      fieldObj.focus();
+      alert(labels[i] + ' cannot be empty.');
+      return false;
+    }
+    if (fieldObj) fieldObj.classList.remove('error');
+  }
+  if (!validateEmail3074688000001485061()) return false;
+  document.querySelector('#trial-form [type=submit]').setAttribute('disabled', true);
+  return true;
+}
 })();
