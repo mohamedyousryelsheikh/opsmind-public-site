@@ -309,4 +309,3 @@ function checkMandatory3074688000001485061() {
   document.querySelector('#trial-form [type=submit]').setAttribute('disabled', true);
   return true;
 }
-})();

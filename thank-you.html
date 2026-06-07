@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Request received — OpsMind</title>
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .ty-wrap {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(32px, 6vw, 80px) var(--gutter);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .ty-glow {
+    position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  }
+  .ty-glow::before {
+    content: "";
+    position: absolute; top: -200px; left: 50%; transform: translateX(-50%);
+    width: 1000px; height: 600px;
+    background: radial-gradient(ellipse at center, rgba(99,102,241,.15), rgba(124,58,237,.07) 44%, transparent 70%);
+    filter: blur(8px);
+  }
+  .ty-card {
+    position: relative; z-index: 1;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: clamp(36px, 5vw, 60px) clamp(32px, 5vw, 64px);
+    max-width: 540px;
+    width: 100%;
+    animation: card-in .6s cubic-bezier(.2,.7,.3,1) both;
+  }
+  @keyframes card-in {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: none; }
+  }
+  .ty-icon {
+    width: 64px; height: 64px; border-radius: 50%;
+    background: linear-gradient(140deg, #19B377, #0E8A5A);
+    display: grid; place-items: center;
+    margin: 0 auto 26px;
+    box-shadow: 0 8px 24px -8px rgba(21,160,106,.5);
+    animation: icon-pop .5s .25s cubic-bezier(.34,1.56,.64,1) both;
+  }
+  @keyframes icon-pop {
+    from { opacity: 0; transform: scale(.5); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+  .ty-icon svg { width: 30px; height: 30px; color: #fff; }
+  .ty-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--mono); font-size: 11px; font-weight: 600;
+    letter-spacing: .12em; text-transform: uppercase;
+    color: var(--green-600); background: #E7F6EE;
+    border: 1px solid #C7E9D6; border-radius: 999px;
+    padding: 5px 14px; margin-bottom: 18px;
+  }
+  .ty-h { font-size: clamp(26px, 4vw, 36px); font-weight: 800; letter-spacing: -.03em; line-height: 1.05; }
+  .ty-sub {
+    font-size: 16px; color: var(--ink-2); line-height: 1.6;
+    margin: 14px auto 0; max-width: 400px;
+  }
+  .ty-steps {
+    margin: 28px 0 32px;
+    display: flex; flex-direction: column; gap: 0;
+    text-align: left;
+    border: 1px solid var(--border-2); border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+  .ty-step {
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 14px 18px; border-bottom: 1px solid var(--border-2);
+    background: var(--surface);
+  }
+  .ty-step:last-child { border-bottom: none; }
+  .ty-step-num {
+    flex-shrink: 0; width: 24px; height: 24px; border-radius: 7px;
+    background: var(--indigo-50); color: var(--indigo-700);
+    display: grid; place-items: center;
+    font-family: var(--mono); font-size: 11px; font-weight: 700;
+    margin-top: 1px;
+  }
+  .ty-step-text { font-size: 14px; color: var(--ink-2); line-height: 1.5; }
+  .ty-step-text b { color: var(--ink); font-weight: 600; }
+  .ty-actions { display: flex; flex-direction: column; gap: 10px; }
+  .btn-full { width: 100%; justify-content: center; }
+  .ty-footer {
+    position: relative; z-index: 1;
+    margin-top: 28px; font-size: 13px; color: var(--ink-3);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .ty-logo { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; color: var(--ink-2); }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="om-mark" viewBox="0 0 24 24">
+    <path d="M14.9 5.05 A7.7 7.7 0 1 1 9.1 5.05" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="12" cy="4.2" r="2.35" fill="currentColor"/>
+  </symbol>
+</svg>
+
+<div class="ty-wrap">
+  <div class="ty-glow"></div>
+
+  <div class="ty-card">
+    <div class="ty-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="ty-tag">Demo request received</div>
+
+    <h1 class="ty-h">We'll be in touch shortly.</h1>
+    <p class="ty-sub">Thanks for your interest in OpsMind. Someone from our team will reach out within one business day to arrange your walkthrough.</p>
+
+    <div class="ty-steps">
+      <div class="ty-step">
+        <div class="ty-step-num">1</div>
+        <div class="ty-step-text"><b>Confirmation email on the way</b><br>Check your inbox — we've noted your request.</div>
+      </div>
+      <div class="ty-step">
+        <div class="ty-step-num">2</div>
+        <div class="ty-step-text"><b>We'll schedule a 30-minute walkthrough</b><br>Mapped to your real deadlines, collections and cash position.</div>
+      </div>
+      <div class="ty-step">
+        <div class="ty-step-num">3</div>
+        <div class="ty-step-text"><b>Go live in days, not quarters</b><br>Deployed and configured with our team, in your environment.</div>
+      </div>
+    </div>
+
+    <div class="ty-actions">
+      <a class="btn btn-indigo btn-lg btn-full" href="/">
+        <svg viewBox="0 0 16 16" fill="none" style="transform:scaleX(-1)"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back to OpsMind
+      </a>
+      <a class="btn btn-ghost btn-lg btn-full" href="/#forecast">See the cashflow simulator</a>
+    </div>
+  </div>
+
+  <div class="ty-footer">
+    <a class="ty-logo" href="/">
+      <span class="logo-mark sm"><svg class="lm-glyph"><use href="#om-mark"/></svg></span>
+      OpsMind
+    </a>
+    <span>·</span>
+    <span>Operational intelligence platform</span>
+  </div>
+</div>
+
+</body>
+</html>
