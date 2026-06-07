@@ -580,9 +580,13 @@ h1, h2, h3 { letter-spacing: -.03em; line-height: 1.04; font-weight: 700; text-w
 /* ---------- reveal animation ---------- */
 /* hidden state only applies once JS confirms it can drive the animation,
    so content is never stuck invisible if JS/IO fails */
-body.reveal-ready .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s cubic-bezier(.2,.7,.3,1), transform .7s cubic-bezier(.2,.7,.3,1); }
+body.reveal-ready .reveal { opacity: 0; transform: translateY(28px); transition: opacity .75s cubic-bezier(.16,.7,.3,1), transform .75s cubic-bezier(.16,.7,.3,1); }
+body.reveal-ready .reveal.from-left  { transform: translateX(-52px); }
+body.reveal-ready .reveal.from-right { transform: translateX(52px); }
+body.reveal-ready .reveal.scale-in   { transform: scale(.93) translateY(14px); }
 body.reveal-ready .reveal.in { opacity: 1; transform: none; }
-.reveal.d1 { transition-delay: .08s; } .reveal.d2 { transition-delay: .16s; } .reveal.d3 { transition-delay: .24s; } .reveal.d4 { transition-delay: .32s; }
+.reveal.d1 { transition-delay: .08s; } .reveal.d2 { transition-delay: .16s; } .reveal.d3 { transition-delay: .24s; }
+.reveal.d4 { transition-delay: .32s; } .reveal.d5 { transition-delay: .40s; } .reveal.d6 { transition-delay: .48s; }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1 !important; transform: none !important; } html { scroll-behavior: auto; } }
 
 .divider-label { text-align: center; font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 28px; }

@@ -59,7 +59,7 @@
   </div>
 
   <!-- recreated product UI -->
-  <div class="wrap hero-shot reveal d2">
+  <div class="wrap hero-shot reveal d2 scale-in">
     <div class="window">
       <div class="window-bar">
         <div class="traffic"><i></i><i></i><i></i></div>
@@ -125,10 +125,10 @@
 <!-- ============ STATS BAND ============ -->
 <section class="section" style="padding-block: clamp(20px,3vw,40px) clamp(56px,8vw,96px);">
   <div class="wrap">
-    <div class="statband reveal">
+    <div class="statband">
       <div class="statband-inner">
 
-        <div class="s-item">
+        <div class="s-item reveal">
           <div class="s-icon">
             <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="1.6"/><path d="M10 6v4l2.5 2.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
           </div>
@@ -137,7 +137,7 @@
           <div class="s-proof">One full working day back — to focus on running the business, not chasing paperwork.</div>
         </div>
 
-        <div class="s-item">
+        <div class="s-item reveal d1">
           <div class="s-icon">
             <svg viewBox="0 0 20 20" fill="none"><polyline points="2,15 6,9 9,11 13,5 18,3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 3h5v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
@@ -146,7 +146,7 @@
           <div class="s-proof">Built from your real payroll schedules, leases, invoices and tax periods — not guesswork.</div>
         </div>
 
-        <div class="s-item">
+        <div class="s-item reveal d2">
           <div class="s-icon">
             <svg viewBox="0 0 20 20" fill="none"><path d="M10 2.5L3 6v5c0 4 3.1 7.2 7 7.5 3.9-.3 7-3.5 7-7.5V6L10 2.5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M7 10.5l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
@@ -155,7 +155,7 @@
           <div class="s-proof">Contracts, VAT filings, government permits and payroll runs — every due date is surfaced early.</div>
         </div>
 
-        <div class="s-item">
+        <div class="s-item reveal d3">
           <div class="s-icon">
             <svg viewBox="0 0 20 20" fill="none"><path d="M10 2v4M10 14v4M2 10h4M14 10h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="10" cy="10" r="3" stroke="currentColor" stroke-width="1.6"/></svg>
           </div>
@@ -279,7 +279,7 @@
 <section class="section" id="capture" style="background:var(--bg-2);">
   <div class="wrap">
     <div class="split">
-      <div class="split-copy reveal">
+      <div class="split-copy reveal from-left">
         <div class="kicker-row"><span class="eyebrow">Bulk capture · AI extraction</span></div>
         <h2 class="h-section">Drop a year of invoices. Get a collection plan by lunch.</h2>
         <p class="lede">Upload contracts, invoices, IDs or any operational PDF — by the stack. OpsMind detects the type, pulls the parties, dates and amounts, and files each one in the right place with a collection date and reminder attached.</p>
@@ -298,7 +298,7 @@
           </div>
         </div>
       </div>
-      <div class="split-img reveal d2">
+      <div class="split-img reveal d1 from-right">
         <div class="ai-flow">
           <div class="ai-flow-top">
             <span class="logo-mark sm"><svg class="lm-glyph"><use href="#om-mark"/></svg></span>
@@ -346,7 +346,7 @@
 <section class="section" id="claims">
   <div class="wrap">
     <div class="split rev">
-      <div class="split-copy reveal">
+      <div class="split-copy reveal from-right">
         <div class="kicker-row"><span class="eyebrow">Claims · AI review</span></div>
         <h2 class="h-section">Claims fill themselves in. You just approve.</h2>
         <p class="lede">Staff snap a receipt and send it in — through a link, email or WhatsApp. OpsMind reads the amount, currency, date and expense type, builds the claim, and drops it straight into your Claims queue to accept or reject.</p>
@@ -365,7 +365,7 @@
           </div>
         </div>
       </div>
-      <div class="split-img reveal d2">
+      <div class="split-img reveal d1 from-left">
         <div class="claims-inbox">
           <div class="claims-top">
             <div class="t">Claims <span class="ai-chip">AI</span></div>
@@ -418,7 +418,7 @@
 <section class="section" id="contracts" style="background:var(--bg-2);">
   <div class="wrap">
     <div class="split">
-      <div class="split-copy reveal">
+      <div class="split-copy reveal from-left">
         <div class="kicker-row"><span class="eyebrow">Contracts · Document generation</span></div>
         <h2 class="h-section">Generate employment contracts from your own templates.</h2>
         <p class="lede">Upload your company’s contract as a Word template with <span style="font-family:var(--mono);font-size:.85em;background:var(--indigo-50);color:var(--indigo-700);padding:1px 5px;border-radius:4px;">{{placeholder}}</span> markers once. OpsMind merges in each employee’s details and produces a ready-to-sign contract — then feeds the same data into payroll and renewal tracking.</p>
@@ -437,7 +437,7 @@
           </div>
         </div>
       </div>
-      <div class="split-img reveal d2">
+      <div class="split-img reveal d1 from-right">
         <div class="contract-gen">
           <div class="cg-top">
             <span class="logo-mark sm"><svg class="lm-glyph"><use href="#om-mark"/></svg></span>
@@ -482,25 +482,25 @@
       <p class="lede">Documents flow in once and feed everything downstream — people, payroll, finances and compliance stay in sync without re-keying a thing.</p>
     </div>
     <div class="cards3">
-      <div class="fcard reveal">
+      <div class="fcard reveal scale-in">
         <div class="ficon green"><svg viewBox="0 0 20 20" fill="none"><path d="M4 7a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v9H4z" stroke="currentColor" stroke-width="1.5"/><path d="M7 9h6M7 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
         <h3>Contracts → payroll, automatically</h3>
         <p>Upload employee contracts and OpsMind builds the monthly payroll sheet for the admin — salaries, currency conversion and renewal reminders included.</p>
         <div class="tagrow"><span class="chip indigo">Multi-currency</span><span class="chip green">Payslips</span></div>
       </div>
-      <div class="fcard reveal d1">
+      <div class="fcard reveal d1 scale-in">
         <div class="ficon indigo"><svg viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="14" rx="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M3 8h14M7 3v3M13 3v3" stroke="currentColor" stroke-width="1.5"/></svg></div>
         <h3>Documents &amp; renewals tracking</h3>
         <p>Contracts, leases and government permits in one register — with expiry tracking and a 90-day window so nothing lapses unnoticed.</p>
         <div class="tagrow"><span class="chip amber">Expiry alerts</span><span class="chip indigo">Gov permits</span></div>
       </div>
-      <div class="fcard reveal d2">
+      <div class="fcard reveal d2 scale-in">
         <div class="ficon blue"><svg viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="14" rx="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 13l2.5-3 2 2 2.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <h3>VAT &amp; tax filing periods</h3>
         <p>Estimated from your invoices and built per jurisdiction — Egypt VAT quarterly, UAE corporate tax annually — each with its own due date and status.</p>
         <div class="tagrow"><span class="chip green">Egypt VAT</span><span class="chip green">UAE corp. tax</span></div>
       </div>
-      <div class="fcard reveal d3">
+      <div class="fcard reveal d3 scale-in">
         <div class="ficon violet"><svg viewBox="0 0 20 20" fill="none"><path d="M10 3c3.5 0 6 2.2 6 5 0 2.8-2.5 5-6 5-.7 0-1.4-.1-2-.3L5 14l.5-2.3C4.6 10.8 4 9.5 4 8c0-2.8 2.5-5 6-5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
         <h3>Ask OpsMind</h3>
         <p>A question box over your whole operation. “Which contracts expire this quarter?” “What did we spend on Asana?” — answered from your own data.</p>
@@ -519,7 +519,7 @@
       <p class="lede">OpsMind sits across your stack and keeps the operational truth in one place — no rip-and-replace.</p>
     </div>
     <div class="int-grid">
-      <div class="int-card reveal">
+      <div class="int-card reveal scale-in">
         <div class="int-logo">
           <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="15.5" r="3.4" fill="#F06A6A"/><circle cx="7" cy="8.5" r="3.4" fill="#F06A6A"/><circle cx="17" cy="8.5" r="3.4" fill="#F06A6A"/></svg>
         </div>
@@ -527,7 +527,7 @@
         <p>Claims raised in Asana flow straight into OpsMind as expenses, with approvals and attachments intact.</p>
         <div class="status"><i></i> Connected · claims sync</div>
       </div>
-      <div class="int-card reveal d1">
+      <div class="int-card reveal d1 scale-in">
         <div class="int-logo">
           <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3" fill="#E42527"/><path d="M8 9h8l-8 6h8" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
         </div>
@@ -535,7 +535,7 @@
         <p>Push payroll and reconciled expenses to Zoho Books in a click — your ledger stays the source of accounting truth.</p>
         <div class="status"><i></i> Connected · ledger push</div>
       </div>
-      <div class="int-card reveal d2">
+      <div class="int-card reveal d2 scale-in">
         <div class="int-logo">
           <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#25D366"/><path d="M12 5.5a6.5 6.5 0 0 1 5.6 9.75l.85 3.25-3.32-.87A6.5 6.5 0 1 1 12 5.5z" fill="#fff"/><path d="M9.4 9.6c.14-.3.7-1.1 1.25-1.1.28 0 .43.14.56.3l.7 1.55c.07.15 0 .35-.14.5l-.42.42c.42.78 1.12 1.4 1.9 1.76l.42-.42c.14-.14.35-.21.5-.14l1.55.7c.2.07.28.28.2.5-.28.7-1 1.26-1.82 1.26-2.5 0-6.36-3.86-6.36-6.36 0-.84.56-1.55 1.26-1.82.22-.07.42 0 .5.2z" fill="#25D366"/></svg>
         </div>
@@ -543,7 +543,7 @@
         <p>Expiring contracts, collection reminders and payroll nudges land where the region actually works — WhatsApp.</p>
         <div class="status"><i></i> Connected · notifications</div>
       </div>
-      <div class="int-card reveal d3">
+      <div class="int-card reveal d3 scale-in">
         <div class="int-logo">
           <svg viewBox="0 0 24 24" fill="none"><path d="M9.4 3.5L3 14.5l3 5 6.4-11z" fill="#0F9D58"/><path d="M14.6 3.5L21 14.5l-3 5-6.4-11z" fill="#4285F4"/><path d="M12 3.5L6 14.5h12L12 3.5z" fill="#FBBC05"/></svg>
         </div>
@@ -551,7 +551,7 @@
         <p>Sync a Drive folder and OpsMind ingests new documents as they land — captured, extracted and filed.</p>
         <div class="status"><i></i> Connected · auto-ingest</div>
       </div>
-      <div class="int-card reveal d3">
+      <div class="int-card reveal d3 scale-in">
         <div class="int-logo">
           <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="#5C5C66" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="#5C5C66" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
@@ -572,17 +572,17 @@
       <p class="lede">Multi-currency by default, VAT and corporate tax across Egypt and the Gulf, Arabic documents, and reminders on the channel your team already lives in.</p>
     </div>
     <div class="region-grid">
-      <div class="region-card reveal">
+      <div class="region-card reveal scale-in">
         <div class="rc-top"><span class="ccy">EGP</span><span class="ccy">AED</span><span class="ccy">USD</span></div>
         <h4>True multi-currency</h4>
         <p>Salaries, invoices and leases in their native currency, converted at live rates into one cash position you can actually read.</p>
       </div>
-      <div class="region-card reveal d1">
+      <div class="region-card reveal d1 scale-in">
         <div class="rc-top"><span class="ccy">14% · Quarterly</span><span class="ccy">9% · Annual</span></div>
         <h4>VAT &amp; corporate tax</h4>
         <p>Egypt VAT filing periods and UAE corporate tax thresholds tracked per entity, estimated from your invoices, with due dates surfaced early.</p>
       </div>
-      <div class="region-card reveal d2">
+      <div class="region-card reveal d2 scale-in">
         <div class="rc-top"><span class="ccy">عربي</span><span class="ccy">EN</span></div>
         <h4>Arabic-ready capture</h4>
         <p>Bilingual contracts and documents are read and extracted just as cleanly — parties, dates and amounts, right-to-left included.</p>
