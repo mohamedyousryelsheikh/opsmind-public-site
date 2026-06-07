@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>OpsMind — Never miss an operational obligation again</title>
+<meta name="description" content="OpsMind reads your contracts, invoices and payroll, then watches every deadline, renewal and collection — the operations cockpit for founders, COOs and MDs of lean teams." />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- OpsMind logo mark (Aperture) — reusable symbol -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="om-mark" viewBox="0 0 24 24">
+    <path d="M14.9 5.05 A7.7 7.7 0 1 1 9.1 5.05" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="12" cy="4.2" r="2.35" fill="currentColor"/>
+  </symbol>
+</svg>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="#top" aria-label="OpsMind home">
+      <span class="logo-mark"><svg class="lm-glyph"><use href="#om-mark"/></svg></span>
+      <span>OpsMind</span>
+      <span class="ver">v0.7</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#forecast">Forecasting</a>
+      <a href="#capture">AI capture</a>
+      <a href="#claims">Claims</a>
+      <a href="#platform">Platform</a>
+      <a href="#integrations">Integrations</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-indigo" href="#start">Book a demo</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-glow"></div>
+  <div class="wrap hero-inner">
+    <span class="pill reveal"><span class="tag">AI</span> Operational intelligence for lean teams</span>
+    <h1 class="h-display reveal d1">Never miss an operational <span class="grad-word">obligation</span> again.</h1>
+    <p class="lede reveal d2">OpsMind reads your contracts, invoices and payroll — then quietly watches every deadline, renewal, VAT period and collection for you. One calm cockpit for the founder, COO or MD running the whole back office.</p>
+    <div class="hero-actions reveal d2">
+      <a class="btn btn-indigo btn-lg" href="#start">Book a demo
+        <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a class="btn btn-ghost btn-lg" href="#forecast">See it work</a>
+    </div>
+    <div class="hero-note reveal d3">
+      <span><span class="dot"></span> Deployed to your environment</span>
+      <span><span class="dot"></span> Guided onboarding</span>
+      <span><span class="dot"></span> Live in days, not quarters</span>
+    </div>
+  </div>
+
+  <!-- recreated product UI -->
+  <div class="wrap hero-shot reveal d2">
+    <div class="window">
+      <div class="window-bar">
+        <div class="traffic"><i></i><i></i><i></i></div>
+        <div class="window-url">
+          <svg viewBox="0 0 16 16" fill="none"><rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5 7V5a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.3"/></svg>
+          app.opsmind.co/command-center
+        </div>
+      </div>
+      <div class="app">
+        <!-- sidebar -->
+        <aside class="app-side">
+          <div class="brand"><span class="logo-mark sm"><svg class="lm-glyph"><use href="#om-mark"/></svg></span> OpsMind</div>
+          <div class="side-group">Operate</div>
+          <div class="side-item active"><svg class="ic" viewBox="0 0 16 16" fill="none"><rect x="1" y="4" width="14" height="8" rx="1.5" stroke="currentColor" stroke-width="1.4"/><circle cx="4.5" cy="8" r="1" fill="currentColor"/></svg> Command Center</div>
+          <div class="side-item"><svg class="ic" viewBox="0 0 16 16" fill="none"><rect x="1" y="1" width="6" height="6" rx="1" fill="currentColor"/><rect x="9" y="1" width="6" height="6" rx="1" fill="currentColor"/><rect x="1" y="9" width="6" height="6" rx="1" fill="currentColor"/><rect x="9" y="9" width="6" height="6" rx="1" fill="currentColor"/></svg> Dashboard</div>
+          <div class="side-item"><svg class="ic" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="14" height="12" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M5 1v4M11 1v4M1 7h14" stroke="currentColor" stroke-width="1.4"/></svg> Calendar</div>
+          <div class="side-item"><svg class="ic" viewBox="0 0 16 16" fill="none"><polyline points="1,13 5,8 8,10 11,5 15,3" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg> Simulator</div>
+          <div class="side-group">Capture</div>
+          <div class="side-item"><svg class="ic" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.4"/><path d="M8 5v6M5 8h6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg> Add to OpsMind <span class="badge ai">AI</span></div>
+          <div class="side-group">Finance</div>
+          <div class="side-item"><svg class="ic" viewBox="0 0 16 16" fill="none"><polyline points="1,13 5,8 8,10 11,5 15,3" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg> Commitments</div>
+          <div class="side-item"><svg class="ic" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.4"/></svg> VAT</div>
+        </aside>
+        <!-- main -->
+        <div class="app-main">
+          <div class="app-topline"><div class="app-h">Command Center</div></div>
+          <div class="app-sub">Saturday, 6 June 2026 · Live operational overview</div>
+          <div class="stat-cards">
+            <div class="stat-card indigo"><div class="lbl">Headcount</div><div class="big">10</div><div class="meta">active employees</div></div>
+            <div class="stat-card violet"><div class="lbl">Payroll this month</div><div class="big">$10K</div><div class="meta">June 2026</div></div>
+            <div class="stat-card blue"><div class="lbl">Open receivables</div><div class="big">$25K</div><div class="meta">1 invoice</div></div>
+            <div class="stat-card green"><div class="lbl">Cash position</div><div class="big">$127K</div><div class="meta">collected — all paid</div></div>
+          </div>
+          <div class="app-grid2">
+            <div class="panel">
+              <div class="panel-head"><div class="t">6-month snapshot</div><div class="legend"><span><i style="background:#8B8FF5"></i>Income</span><span><i style="background:#F4A8C0"></i>Payroll</span></div></div>
+              <div class="barchart">
+                <div class="bar-col"><div class="bar-pair"><div class="bar inc" style="height:28%"></div><div class="bar exp" style="height:18%"></div></div><div class="xl">Jan</div></div>
+                <div class="bar-col"><div class="bar-pair"><div class="bar inc" style="height:20%"></div><div class="bar exp" style="height:20%"></div></div><div class="xl">Feb</div></div>
+                <div class="bar-col"><div class="bar-pair"><div class="bar inc" style="height:38%"></div><div class="bar exp" style="height:22%"></div></div><div class="xl">Mar</div></div>
+                <div class="bar-col"><div class="bar-pair"><div class="bar inc" style="height:14%"></div><div class="bar exp" style="height:24%"></div></div><div class="xl">Apr</div></div>
+                <div class="bar-col"><div class="bar-pair"><div class="bar inc" style="height:94%"></div><div class="bar exp" style="height:22%"></div></div><div class="xl">May</div></div>
+                <div class="bar-col"><div class="bar-pair"><div class="bar inc" style="height:22%"></div><div class="bar exp" style="height:22%"></div></div><div class="xl">Jun</div></div>
+              </div>
+            </div>
+            <div class="panel">
+              <div class="panel-head"><div class="t">Next 30 days</div><div class="legend">Upcoming</div></div>
+              <div class="mini-list">
+                <div class="mini-row"><div class="date">30 Jun<br>24d</div><div class="nm">Solutions Engineer contract<small>Employment renewal</small></div><div class="amt">$666</div></div>
+                <div class="mini-row"><div class="date">30 Jun<br>24d</div><div class="nm">Data Engineer contract<small>Employment renewal</small></div><div class="amt">$540</div></div>
+                <div class="mini-row"><div class="date">28 Jun<br>22d</div><div class="nm">VAT — Q1 2026 filing<small>Egypt · EGP</small></div><div class="amt">due</div></div>
+                <div class="mini-row"><div class="date">25 Jun<br>19d</div><div class="nm">Payroll run · 9 staff<small>June 2026</small></div><div class="amt">$10K</div></div>
+                <div class="mini-row"><div class="date">9 Aug<br>64d</div><div class="nm">Government permit<small>Renewal required</small></div><div class="amt">!</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS BAND ============ -->
+<section class="section" style="padding-block: clamp(20px,3vw,40px) clamp(56px,8vw,96px);">
+  <div class="wrap">
+    <div class="statband reveal">
+      <div class="statband-inner">
+        <div>
+          <div class="s-num"><span data-count="9" data-suffix="h">0</span></div>
+          <div class="s-lbl">of admin time saved per week, on average</div>
+        </div>
+        <div>
+          <div class="s-num"><span data-count="40" data-prefix="$" data-suffix="K">0</span></div>
+          <div class="s-lbl">cash position tracked across currencies, live</div>
+        </div>
+        <div>
+          <div class="s-num"><span data-count="100" data-suffix="%">0</span></div>
+          <div class="s-lbl">of deadlines surfaced before they pass</div>
+        </div>
+        <div>
+          <div class="s-num"><span data-count="2" data-suffix=" min">0</span></div>
+          <div class="s-lbl">to extract a contract — parties, dates, amounts</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEAD FEATURE 1 — FORECAST + SIMULATOR ============ -->
+<section class="section" id="forecast" style="padding-top: clamp(24px,4vw,56px);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker-row"><span class="eyebrow">Cashflow forecasting · Simulator</span></div>
+      <h2 class="h-section">See your cash position months before it arrives.</h2>
+      <p class="lede">Every payroll run, lease payment, VAT bill and expected collection is already in OpsMind. It projects your cash 24 months out from real schedules — then layers “what if?” scenarios on top so you can compare a hire, a new lease or a slow quarter side by side. Pick a scenario below.</p>
+    </div>
+
+    <div class="sim reveal d1" id="sim" style="margin-top: 44px;">
+      <!-- banner -->
+      <div class="sim-banner">
+        <div>
+          <div class="lbl">Current cash balance</div>
+          <div class="val-green">$127.4K</div>
+          <div class="sub">All collected invoices minus all paid expenses</div>
+        </div>
+        <div class="sim-banner-right">
+          <div class="lbl" id="sim-proj-label">Hiring Project Manager</div>
+          <div class="val pos" id="sim-proj">+$193.2K</div>
+          <div class="sub">Projected cash in 24 months</div>
+        </div>
+      </div>
+      <!-- stat row -->
+      <div class="sim-statrow">
+        <div class="cell"><div class="k">Payroll · 24m</div><div class="v" id="sim-payroll">$185.6K</div><div class="src">from actual schedules</div></div>
+        <div class="cell"><div class="k">Leases · 24m</div><div class="v" id="sim-lease">$16.6K</div><div class="src">from actual schedules</div></div>
+        <div class="cell"><div class="k">Revenue · 24m</div><div class="v" id="sim-rev">$268.0K</div><div class="src">from actual schedules</div></div>
+        <div class="cell"><div class="k">Net total · 24m</div><div class="v pos" id="sim-net">+$65.8K</div><div class="src">from actual schedules</div></div>
+      </div>
+      <!-- chart -->
+      <div class="sim-chart">
+        <div class="sim-chart-head">
+          <div>
+            <div class="t">Cash position — 24-month projection</div>
+            <div class="d">Starting from $127.4K today, this shows where the company’s cash lands each month under each scenario.</div>
+          </div>
+          <div class="sim-toggle">
+            <button class="active" type="button">Cash position</button>
+            <button type="button">Monthly net</button>
+          </div>
+        </div>
+        <svg class="svg-chart" id="simChart" viewBox="0 0 920 320" preserveAspectRatio="xMidYMid meet" aria-label="24-month cash position projection by scenario">
+          <g id="sim-gridlines"></g>
+          <line id="sim-zero" x1="44" x2="912" y1="220" y2="220" stroke="#9A9AA0" stroke-width="1"/>
+          <path class="sim-line" id="line-base" d="" stroke="#9A9AA0" stroke-dasharray="6 5"/>
+          <path class="sim-line" id="line-hire" d="" stroke="#15A06A"/>
+          <path class="sim-line" id="line-lease" d="" stroke="#DC2626"/>
+          <g id="sim-endlabels"></g>
+          <g id="sim-xlabels"></g>
+        </svg>
+        <div class="sim-evt-bar" id="sim-evt">● New hire · Project Manager · wins projects · +$243K revenue over 24m</div>
+      </div>
+      <!-- scenario chips -->
+      <div class="sim-chips">
+        <span class="clabel">Compare scenario:</span>
+        <button class="scenario-chip" data-scn="base"><span class="dot" style="background:#9A9AA0"></span> Baseline</button>
+        <button class="scenario-chip active" data-scn="hire"><span class="dot" style="background:#15A06A"></span> Hiring Project Manager</button>
+        <button class="scenario-chip" data-scn="lease"><span class="dot" style="background:#DC2626"></span> Office Rental</button>
+      </div>
+      <!-- comparison table -->
+      <div class="sim-compare">
+        <table>
+          <thead>
+            <tr>
+              <th>Scenario</th>
+              <th class="hide-sm">Revenue</th>
+              <th class="hide-sm">Payroll</th>
+              <th>Net total</th>
+              <th>Cash in 24m</th>
+              <th>Risk</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-row="base">
+              <td><span class="scn"><span class="dot" style="background:#9A9AA0"></span> Baseline</span></td>
+              <td class="hide-sm">$25.0K</td>
+              <td class="hide-sm">$170.5K</td>
+              <td class="neg">−$162.1K</td>
+              <td class="neg">−$34.6K</td>
+              <td><span class="risk r-amber">6mo gap</span></td>
+            </tr>
+            <tr data-row="hire" class="active">
+              <td><span class="scn"><span class="dot" style="background:#15A06A"></span> Hiring Project Manager</span></td>
+              <td class="hide-sm">$268.0K</td>
+              <td class="hide-sm">$185.6K</td>
+              <td>+$65.8K</td>
+              <td>+$193.2K</td>
+              <td><span class="risk r-green">Healthy</span></td>
+            </tr>
+            <tr data-row="lease">
+              <td><span class="scn"><span class="dot" style="background:#DC2626"></span> Office Rental</span></td>
+              <td class="hide-sm">$25.0K</td>
+              <td class="hide-sm">$170.5K</td>
+              <td class="neg">−$234.1K</td>
+              <td class="neg">−$106.6K</td>
+              <td><span class="risk r-red">12mo gap</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p class="reveal d2" style="text-align:center;font-size:13px;color:var(--ink-3);margin-top:18px;">Illustrative figures. In OpsMind every line is built from your real payroll, leases, invoices and tax periods — scenarios layer on top of that baseline.</p>
+  </div>
+</section>
+
+<!-- ============ LEAD FEATURE 2 — AI CAPTURE ============ -->
+<section class="section" id="capture" style="background:var(--bg-2);">
+  <div class="wrap">
+    <div class="split">
+      <div class="split-copy reveal">
+        <div class="kicker-row"><span class="eyebrow">Bulk capture · AI extraction</span></div>
+        <h2 class="h-section">Drop a year of invoices. Get a collection plan by lunch.</h2>
+        <p class="lede">Upload contracts, invoices, IDs or any operational PDF — by the stack. OpsMind detects the type, pulls the parties, dates and amounts, and files each one in the right place with a collection date and reminder attached.</p>
+        <div class="feat-list">
+          <div class="row">
+            <span class="ck"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div><b>Up to 10 files at once</b><p>PDF, DOCX, XLSX, JPG, PNG — including Arabic documents and scanned paper.</p></div>
+          </div>
+          <div class="row">
+            <span class="ck"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div><b>Automatic collection reminders</b><p>Each invoice gets a due date and a nudge — over WhatsApp or email — before it ages.</p></div>
+          </div>
+          <div class="row">
+            <span class="ck"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div><b>You stay in control</b><p>Every extracted field is editable and traceable back to the source document.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="split-img reveal d2">
+        <div class="ai-flow">
+          <div class="ai-flow-top">
+            <span class="logo-mark sm"><svg class="lm-glyph"><use href="#om-mark"/></svg></span>
+            <div style="font-weight:700;font-size:14px;">Add to OpsMind</div>
+            <span class="chip indigo" style="margin-left:auto;">AI extracting…</span>
+          </div>
+          <div class="dropzone">
+            <div class="ico"><svg width="22" height="22" viewBox="0 0 16 16" fill="none"><path d="M4 1h5l3 3v11H4z" stroke="#9A9AA0" stroke-width="1.3" fill="none"/><path d="M9 1v3h3" stroke="#9A9AA0" stroke-width="1.3"/></svg></div>
+            <div class="txt">
+              <b>Drop contracts, invoices, IDs or any operational PDF</b>
+              <p>OpsMind auto-detects type, extracts dates, parties and amounts.</p>
+              <div class="fmt">PDF · DOCX · XLSX · JPG · PNG — up to 10 at once</div>
+            </div>
+          </div>
+          <div class="extract-rows">
+            <div class="ex-row">
+              <div class="fic">INV</div>
+              <div class="nm">INV-2026-03.pdf<small>Northline Trading → Aklaniat Technology</small></div>
+              <div class="ex-field"><div class="k">Amount</div><div class="val"><span class="pf-mark">$24,800</span></div></div>
+              <div class="ex-field"><div class="k">Collect by</div><div class="val">28 Jun 2026</div></div>
+              <span class="chip amber">Reminder set</span>
+            </div>
+            <div class="ex-row">
+              <div class="fic">DOC</div>
+              <div class="nm">Solutions_Engineer_Contract.docx<small>Employment · renewal tracked</small></div>
+              <div class="ex-field"><div class="k">Expiry</div><div class="val"><span class="pf-mark">17 Aug 2026</span></div></div>
+              <div class="ex-field"><div class="k">Renewal</div><div class="val">2m 12d left</div></div>
+              <span class="chip indigo">Filed</span>
+            </div>
+            <div class="ex-row">
+              <div class="fic">LSE</div>
+              <div class="nm">hydepark_office_lease.pdf<small>Lease / Rental · EGP 71,500 / mo</small></div>
+              <div class="ex-field"><div class="k">Term ends</div><div class="val"><span class="pf-mark">31 Aug 2027</span></div></div>
+              <div class="ex-field"><div class="k">Next payment</div><div class="val">1 Sep 2026</div></div>
+              <span class="chip green">Scheduled</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLAIMS — AI REVIEW ============ -->
+<section class="section" id="claims">
+  <div class="wrap">
+    <div class="split rev">
+      <div class="split-copy reveal">
+        <div class="kicker-row"><span class="eyebrow">Claims · AI review</span></div>
+        <h2 class="h-section">Claims fill themselves in. You just approve.</h2>
+        <p class="lede">Staff snap a receipt and send it in — through a link, email or WhatsApp. OpsMind reads the amount, currency, date and expense type, builds the claim, and drops it straight into your Claims queue to accept or reject.</p>
+        <div class="feat-list">
+          <div class="row">
+            <span class="ck"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div><b>Receipt in, fields out</b><p>AI pulls the amount, currency, date and category straight from a photo or PDF.</p></div>
+          </div>
+          <div class="row">
+            <span class="ck"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div><b>One queue, one decision</b><p>Approve or reject in a tap — approved claims update your finances instantly, no inbox to dig through.</p></div>
+          </div>
+          <div class="row">
+            <span class="ck"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div><b>Synced with Asana &amp; Zoho</b><p>Claims raised in Asana flow in automatically; your approvals push through to Zoho Books.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="split-img reveal d2">
+        <div class="claims-inbox">
+          <div class="claims-top">
+            <div class="t">Claims <span class="ai-chip">AI</span></div>
+            <div class="count" id="claims-count">2 to review · EGP 709</div>
+          </div>
+          <div class="claim-list">
+            <div class="claim live" id="claim-ai">
+              <div class="claim-head">
+                <span class="av">SM</span>
+                <div class="who">Sara Mansour<small>Taxi-receipt.jpg · just now</small></div>
+                <div class="amt"><b class="amt-val">—</b></div>
+              </div>
+              <div class="claim-body">
+                <div class="claim-analyzing-bar"><span class="spin"></span> Analyzing receipt — extracting fields…</div>
+              </div>
+            </div>
+            <div class="claim">
+              <div class="claim-head">
+                <span class="av">MY</span>
+                <div class="who">Mohamed Yasser <small>Breadfast-Receipt.pdf · 4m ago</small></div>
+                <div class="amt"><b>EGP 529</b></div>
+              </div>
+              <div class="claim-body">
+                <div class="meta"><span class="chip indigo">Entertainment</span><span class="cdate">6 Jun 2026</span><span class="ai-tag">✦ AI filled</span></div>
+                <div class="claim-actions">
+                  <button class="claim-btn reject" type="button">Reject</button>
+                  <button class="claim-btn approve" type="button">✓ Approve</button>
+                </div>
+              </div>
+            </div>
+            <div class="claim">
+              <div class="claim-head">
+                <span class="av">AT</span>
+                <div class="who">Ahmed Alaa<small>Hotel-invoice.pdf · 1h ago</small></div>
+                <div class="amt"><b>EGP 2,400</b></div>
+              </div>
+              <div class="claim-body">
+                <div class="meta"><span class="chip indigo">Travel</span><span class="cdate">5 Jun 2026</span><span class="ai-tag">✦ AI filled</span></div>
+                <div class="claim-actions"><span class="claim-resolved ok">✓ Approved · synced to Zoho Books</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTRACT GENERATION ============ -->
+<section class="section" id="contracts" style="background:var(--bg-2);">
+  <div class="wrap">
+    <div class="split">
+      <div class="split-copy reveal">
+        <div class="kicker-row"><span class="eyebrow">Contracts · Document generation</span></div>
+        <h2 class="h-section">Generate employment contracts from your own templates.</h2>
+        <p class="lede">Upload your company’s contract as a Word template with <span style="font-family:var(--mono);font-size:.85em;background:var(--indigo-50);color:var(--indigo-700);padding:1px 5px;border-radius:4px;">{{placeholder}}</span> markers once. OpsMind merges in each employee’s details and produces a ready-to-sign contract — then feeds the same data into payroll and renewal tracking.</p>
+        <div class="feat-list">
+          <div class="row">
+            <span class="ck"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div><b>Your template, your wording</b><p>Drop in a .docx with <code style="font-family:var(--mono);font-size:.85em;">{{markers}}</code> — OpsMind detects every field automatically.</p></div>
+          </div>
+          <div class="row">
+            <span class="ck"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div><b>Filled from your people</b><p>Name, nationality, job title, salary and dates merge in from each employee’s record.</p></div>
+          </div>
+          <div class="row">
+            <span class="ck"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div><b>One source of truth</b><p>Generated contracts feed payroll and renewal reminders — no re-keying, nothing out of sync.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="split-img reveal d2">
+        <div class="contract-gen">
+          <div class="cg-top">
+            <span class="logo-mark sm"><svg class="lm-glyph"><use href="#om-mark"/></svg></span>
+            <div class="t">Contract templates</div>
+            <div class="sim-toggle" style="margin-left:auto;">
+              <button class="active" type="button">Template</button>
+              <button type="button">Generated</button>
+            </div>
+          </div>
+          <div class="cg-name">non-KPI employment contract <span>· template.docx</span> <span class="chip green" style="font-family:var(--font);">ACTIVE</span></div>
+          <div class="cg-chips">
+            <span class="cg-chip">{{Full Name}}</span>
+            <span class="cg-chip">{{Nationality}}</span>
+            <span class="cg-chip">{{Passport Number}}</span>
+            <span class="cg-chip">{{Job Title}}</span>
+            <span class="cg-chip">{{Start Date}}</span>
+            <span class="cg-chip">{{End Date}}</span>
+            <span class="cg-chip">{{Basic Salary}}</span>
+            <span class="cg-chip">{{Transportation Allowance}}</span>
+          </div>
+          <div class="cg-paper">
+            <h6>Employment agreement</h6>
+            <p>This agreement is made between <b>YOUR COMPANY LTD.</b> and <span class="ph" data-ph="{{Full Name}}" data-val="Mariam Ahmed Amin">{{Full Name}}</span>, a <span class="ph" data-ph="{{Nationality}}" data-val="Egyptian">{{Nationality}}</span> national holding passport <span class="ph" data-ph="{{Passport Number}}" data-val="A1234567">{{Passport Number}}</span>, for the role of <span class="ph" data-ph="{{Job Title}}" data-val="Operations Associate">{{Job Title}}</span>.</p>
+            <p>The term commences on <span class="ph" data-ph="{{Start Date}}" data-val="1 Nov 2025">{{Start Date}}</span> and ends on <span class="ph" data-ph="{{End Date}}" data-val="8 Nov 2026">{{End Date}}</span>. The employee receives a basic salary of <span class="ph" data-ph="{{Basic Salary}}" data-val="EGP 28,000">{{Basic Salary}}</span> plus a transportation allowance of <span class="ph" data-ph="{{Transportation Allowance}}" data-val="EGP 1,500">{{Transportation Allowance}}</span>.</p>
+          </div>
+          <div class="cg-foot">
+            <span class="info" id="cg-info">8 fields ready to merge</span>
+            <span class="btn btn-primary" style="padding:8px 16px;font-size:13px;border-radius:9px;cursor:default;">Generate · 10 employees</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLATFORM — SECONDARY GRID ============ -->
+<section class="section" id="platform">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <div class="kicker-row" style="justify-content:center;"><span class="eyebrow">One workspace</span></div>
+      <h2 class="h-section">The whole back office, captured once.</h2>
+      <p class="lede">Documents flow in once and feed everything downstream — people, payroll, finances and compliance stay in sync without re-keying a thing.</p>
+    </div>
+    <div class="cards3">
+      <div class="fcard reveal">
+        <div class="ficon green"><svg viewBox="0 0 20 20" fill="none"><path d="M4 7a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v9H4z" stroke="currentColor" stroke-width="1.5"/><path d="M7 9h6M7 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <h3>Contracts → payroll, automatically</h3>
+        <p>Upload employee contracts and OpsMind builds the monthly payroll sheet for the admin — salaries, currency conversion and renewal reminders included.</p>
+        <div class="tagrow"><span class="chip indigo">Multi-currency</span><span class="chip green">Payslips</span></div>
+      </div>
+      <div class="fcard reveal d1">
+        <div class="ficon indigo"><svg viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="14" rx="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M3 8h14M7 3v3M13 3v3" stroke="currentColor" stroke-width="1.5"/></svg></div>
+        <h3>Documents &amp; renewals tracking</h3>
+        <p>Contracts, leases and government permits in one register — with expiry tracking and a 90-day window so nothing lapses unnoticed.</p>
+        <div class="tagrow"><span class="chip amber">Expiry alerts</span><span class="chip indigo">Gov permits</span></div>
+      </div>
+      <div class="fcard reveal d2">
+        <div class="ficon blue"><svg viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="14" rx="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 13l2.5-3 2 2 2.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>VAT &amp; tax filing periods</h3>
+        <p>Estimated from your invoices and built per jurisdiction — Egypt VAT quarterly, UAE corporate tax annually — each with its own due date and status.</p>
+        <div class="tagrow"><span class="chip green">Egypt VAT</span><span class="chip green">UAE corp. tax</span></div>
+      </div>
+      <div class="fcard reveal d3">
+        <div class="ficon violet"><svg viewBox="0 0 20 20" fill="none"><path d="M10 3c3.5 0 6 2.2 6 5 0 2.8-2.5 5-6 5-.7 0-1.4-.1-2-.3L5 14l.5-2.3C4.6 10.8 4 9.5 4 8c0-2.8 2.5-5 6-5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+        <h3>Ask OpsMind</h3>
+        <p>A question box over your whole operation. “Which contracts expire this quarter?” “What did we spend on Asana?” — answered from your own data.</p>
+        <div class="tagrow"><span class="chip indigo">Natural language</span><span class="chip indigo">Your data only</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTEGRATIONS ============ -->
+<section class="section" id="integrations" style="background:var(--bg-2);">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <div class="kicker-row" style="justify-content:center;"><span class="eyebrow">Integrations</span></div>
+      <h2 class="h-section">Plugs into the tools you already run on.</h2>
+      <p class="lede">OpsMind sits across your stack and keeps the operational truth in one place — no rip-and-replace.</p>
+    </div>
+    <div class="int-grid">
+      <div class="int-card reveal">
+        <div class="int-logo">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="15.5" r="3.4" fill="#F06A6A"/><circle cx="7" cy="8.5" r="3.4" fill="#F06A6A"/><circle cx="17" cy="8.5" r="3.4" fill="#F06A6A"/></svg>
+        </div>
+        <h4>Asana</h4>
+        <p>Claims raised in Asana flow straight into OpsMind as expenses, with approvals and attachments intact.</p>
+        <div class="status"><i></i> Connected · claims sync</div>
+      </div>
+      <div class="int-card reveal d1">
+        <div class="int-logo">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3" fill="#E42527"/><path d="M8 9h8l-8 6h8" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </div>
+        <h4>Zoho Books</h4>
+        <p>Push payroll and reconciled expenses to Zoho Books in a click — your ledger stays the source of accounting truth.</p>
+        <div class="status"><i></i> Connected · ledger push</div>
+      </div>
+      <div class="int-card reveal d2">
+        <div class="int-logo">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#25D366"/><path d="M12 5.5a6.5 6.5 0 0 1 5.6 9.75l.85 3.25-3.32-.87A6.5 6.5 0 1 1 12 5.5z" fill="#fff"/><path d="M9.4 9.6c.14-.3.7-1.1 1.25-1.1.28 0 .43.14.56.3l.7 1.55c.07.15 0 .35-.14.5l-.42.42c.42.78 1.12 1.4 1.9 1.76l.42-.42c.14-.14.35-.21.5-.14l1.55.7c.2.07.28.28.2.5-.28.7-1 1.26-1.82 1.26-2.5 0-6.36-3.86-6.36-6.36 0-.84.56-1.55 1.26-1.82.22-.07.42 0 .5.2z" fill="#25D366"/></svg>
+        </div>
+        <h4>WhatsApp</h4>
+        <p>Expiring contracts, collection reminders and payroll nudges land where the region actually works — WhatsApp.</p>
+        <div class="status"><i></i> Connected · notifications</div>
+      </div>
+      <div class="int-card reveal d3">
+        <div class="int-logo">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9.4 3.5L3 14.5l3 5 6.4-11z" fill="#0F9D58"/><path d="M14.6 3.5L21 14.5l-3 5-6.4-11z" fill="#4285F4"/><path d="M12 3.5L6 14.5h12L12 3.5z" fill="#FBBC05"/></svg>
+        </div>
+        <h4>Google Drive</h4>
+        <p>Sync a Drive folder and OpsMind ingests new documents as they land — captured, extracted and filed.</p>
+        <div class="status"><i></i> Connected · auto-ingest</div>
+      </div>
+      <div class="int-card reveal d3">
+        <div class="int-logo">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="#5C5C66" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="#5C5C66" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h4>Email</h4>
+        <p>Forward an invoice or contract to your OpsMind inbox and it’s captured automatically — no app to open.</p>
+        <div class="status"><i></i> Connected · forward-to-file</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REGION ============ -->
+<section class="section region" id="region">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker-row"><span class="eyebrow">Built for the region</span></div>
+      <h2 class="h-section">Made for how business actually runs in MENA.</h2>
+      <p class="lede">Multi-currency by default, VAT and corporate tax across Egypt and the Gulf, Arabic documents, and reminders on the channel your team already lives in.</p>
+    </div>
+    <div class="region-grid">
+      <div class="region-card reveal">
+        <div class="rc-top"><span class="ccy">EGP</span><span class="ccy">AED</span><span class="ccy">USD</span></div>
+        <h4>True multi-currency</h4>
+        <p>Salaries, invoices and leases in their native currency, converted at live rates into one cash position you can actually read.</p>
+      </div>
+      <div class="region-card reveal d1">
+        <div class="rc-top"><span class="ccy">14% · Quarterly</span><span class="ccy">9% · Annual</span></div>
+        <h4>VAT &amp; corporate tax</h4>
+        <p>Egypt VAT filing periods and UAE corporate tax thresholds tracked per entity, estimated from your invoices, with due dates surfaced early.</p>
+      </div>
+      <div class="region-card reveal d2">
+        <div class="rc-top"><span class="ccy">عربي</span><span class="ccy">EN</span></div>
+        <h4>Arabic-ready capture</h4>
+        <p>Bilingual contracts and documents are read and extracted just as cleanly — parties, dates and amounts, right-to-left included.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA / FORM ============ -->
+<section class="section cta" id="start">
+  <div class="wrap cta-grid">
+    <div class="reveal">
+      <div class="kicker-row"><span class="eyebrow" style="color:#A5B4FC;">Book a demo</span></div>
+      <h2 class="h-section" style="margin-top:14px;">See OpsMind on your own operations.</h2>
+      <p class="lede" style="margin-top:18px;">Book a short walkthrough and we’ll show OpsMind mapped onto your real deadlines, collections and cash — then deploy and configure it with your team, in your environment.</p>
+      <div class="cta-points">
+        <div class="row"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> A 30-minute walkthrough on your real workflows</div>
+        <div class="row"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Deployed and configured with our team</div>
+        <div class="row"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Your data stays in your own environment</div>
+      </div>
+    </div>
+    <div class="reveal d1">
+      <div class="form-card">
+        <!--
+          Zoho CRM Web-to-Lead form.
+          SETUP (one-time, ~2 min):
+            1. Zoho CRM → Settings → Developer Space → Web Forms → + New Form
+            2. Add fields: Last Name, Company, Email, Description
+            3. Set Return URL to:  https://YOUR-DOMAIN/?booked=1#start
+            4. Generate HTML — copy the value of the hidden input named
+               "xnQsjsdp" and paste it below in place of REPLACE_WITH_YOUR_ZOHO_FORM_ID
+               Also update the returnURL value to match your live domain.
+        -->
+        <form id="trial-form"
+              action="https://crm.zoho.com/crm/WebToLeadForm"
+              method="POST"
+              novalidate>
+
+          <!-- Zoho Web-to-Lead required hidden fields -->
+          <input type="hidden" name="xnQsjsdp"   value="REPLACE_WITH_YOUR_ZOHO_FORM_ID" />
+          <input type="hidden" name="xmIwtLD"     value="" />
+          <input type="hidden" name="actionType"  value="TGVhZHM=" />
+          <input type="hidden" name="returnURL"   value="https://YOUR-DOMAIN/?booked=1#start" />
+          <input type="hidden" name="Lead Source" value="Website — Book a demo" />
+
+          <h3>Book a demo</h3>
+          <p class="sub">Tell us a little about your company and we’ll set up a walkthrough.</p>
+          <div class="field-row">
+            <div class="field"><label for="f-name">Full name</label><input id="f-name" name="Last Name" type="text" placeholder="Sara Mansour" required /></div>
+            <div class="field"><label for="f-company">Company</label><input id="f-company" name="Company" type="text" placeholder="Your company" required /></div>
+          </div>
+          <div class="field"><label for="f-email">Work email</label><input id="f-email" name="Email" type="email" placeholder="sara@company.com" required /></div>
+          <div class="field"><label for="f-msg">What do you want OpsMind to take off your plate? <span style="font-weight:400;color:var(--ink-3);">(optional)</span></label><textarea id="f-msg" name="Description" placeholder="Invoice collections, contract renewals, cashflow forecasting…"></textarea></div>
+          <button class="btn btn-indigo btn-lg" type="submit">Book a demo
+            <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <p class="legal">We’ll only use your details to arrange your demo. No spam, no card.</p>
+        </form>
+        <div class="form-success">
+          <div class="ok"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Thanks — we’ll be in touch.</h3>
+          <p class="sub" style="max-width:300px;margin:8px auto 0;">We’ve got your request and will reach out shortly to arrange your OpsMind walkthrough.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-col footer-about">
+        <a class="logo" href="#top"><span class="logo-mark"><svg class="lm-glyph"><use href="#om-mark"/></svg></span><span>OpsMind</span></a>
+        <p>The operations cockpit for founders, COOs and managing directors of lean companies. Capture once, never miss a deadline.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Platform</h5>
+        <a href="#forecast">Cashflow forecasting</a>
+        <a href="#capture">AI document capture</a>
+        <a href="#platform">Payroll &amp; people</a>
+        <a href="#platform">VAT &amp; tax</a>
+        <a href="#platform">Ask OpsMind</a>
+      </div>
+      <div class="footer-col">
+        <h5>Integrations</h5>
+        <a href="#integrations">Asana</a>
+        <a href="#integrations">Zoho Books</a>
+        <a href="#integrations">WhatsApp</a>
+        <a href="#integrations">Google Drive</a>
+        <a href="#integrations">Email</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="#start">Book a demo</a>
+        <a href="#forecast">See it work</a>
+        <a href="#region">For MENA</a>
+        <a href="#top">Security</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 OpsMind. Operational intelligence platform.</span>
+      <div class="socials">
+        <a href="#top">Privacy</a>
+        <a href="#top">Terms</a>
+        <a href="#top">Status</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
